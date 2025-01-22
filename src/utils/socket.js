@@ -1,6 +1,7 @@
 import { io, Socket } from 'socket.io-client';
+import { BACKEND_URL } from '../config';
 
-const socket = io('http://localhost:8080', {
+const socket = io(BACKEND_URL+':8080', {
   transports: ['websocket'],
   withCredentials: true,
 });
